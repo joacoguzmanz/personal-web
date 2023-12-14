@@ -1,19 +1,63 @@
-// Colours
-$black: #101010;
-$white: #FFFFFF;
-$grey: #B8B8B8;
-$primary: #FFC108;
-$error: #C5280C;
-$success: #16A679;
+// Breakpoints
+$jg-breakpoints-xs: 0px;
+$jg-breakpoints-sm: 490px;
+$jg-breakpoints-md: 768px;
+$jg-breakpoints-lg: 1040px;
+$jg-breakpoints-xl: 1440px;
 
-// Typography
-$font-size: 18px;
-$letter-spacing: normal;
-$line-height: 1.5;
+// Breakpoints media queries
+$jg-breakpoints-xs-up: (min-width: $jg-breakpoints-xs);
+$jg-breakpoints-xs-down: (max-width: $jg-breakpoints-xs);
+$jg-breakpoints-xs-only: (min-width: $jg-breakpoints-xs) and (max-width: $jg-breakpoints-sm);
 
-// Font weights
-$light: 300;
-$regular: 400;
-$medium: 500;
-$semibold: 600;
-$bold: 700;
+$jg-breakpoints-sm-up: (min-width: $jg-breakpoints-sm);
+$jg-breakpoints-sm-down: (max-width: $jg-breakpoints-sm);
+$jg-breakpoints-sm-only: (min-width: $jg-breakpoints-sm) and (max-width: $jg-breakpoints-md);
+
+$jg-breakpoints-md-up: (min-width: $jg-breakpoints-md);
+$jg-breakpoints-md-down: (max-width: $jg-breakpoints-md);
+$jg-breakpoints-md-only: (min-width: $jg-breakpoints-md) and (max-width: $jg-breakpoints-lg);
+
+$jg-breakpoints-lg-up: (min-width: $jg-breakpoints-lg);
+$jg-breakpoints-lg-down: (max-width: $jg-breakpoints-lg);
+$jg-breakpoints-lg-only: (min-width: $jg-breakpoints-lg) and (max-width: $jg-breakpoints-xl);
+
+$jg-breakpoints-xl-up: (min-width: $jg-breakpoints-xl);
+$jg-breakpoints-xl-down: (max-width: $jg-breakpoints-xl);
+$jg-breakpoints-xl-only: (min-width: $jg-breakpoints-xl);
+
+// Fonts
+$jg-font-family-primary: 'Recoleta', serif;
+$jg-font-family-secondary: 'Poppins', sans-serif;
+$jg-font-family-mono: 'IBM Plex Mono', monospace;
+
+$jg-font-size-h1: 4.75rem;
+$jg-font-size-h2: 4rem;
+$jg-font-size-h3: 3.5rem;
+$jg-font-size-h4: 2rem;
+$jg-font-size-big: 1.5rem;
+$jg-font-size-body: 1.125rem;
+$jg-font-size-small: 0.875rem;
+
+$jg-font-weight-light: 300;
+$jg-font-weight-regular: 400;
+$jg-font-weight-semibold: 500;
+
+$jg-font-line-height-120: 1.2;
+$jg-font-line-height-130: 1.3;
+$jg-font-line-height-150: 1.5;
+
+// Borders
+$jg-border-radius-250: 25px;
+$jg-border-radius-500: 50px;
+
+// Spacing
+$jg-space-100: 10px;
+$jg-space-200: 20px;
+$jg-space-300: 30px;
+$jg-space-400: 40px;
+$jg-space-600: 60px;
+$jg-space-800: 80px;
+$jg-space-1000: 100px;
+$jg-space-1200: 120px;
+$jg-space-1600: 160px;

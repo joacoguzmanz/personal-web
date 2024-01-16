@@ -2,5 +2,14 @@
 @use "variables";
 @use "normalize";
 @use "base";
+@use "mixins";
 
 // Components
+@use "navbar";
+@use "hero";
+@use "infoHomeSection";
+@use "projectCard";
+@use "button";
+
+// Sections
+@use "home";

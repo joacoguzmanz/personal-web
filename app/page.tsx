@@ -1,11 +1,11 @@
-import ButtonNew from "@/components/Button";
+import HeroSection from "@/components/HeroSection";
+import InfoHomeSection from "@/components/InfoHomeSection";
 
 const Home = async () => {
-
   return (
-    <main>
-      <h1>Hey it's a button</h1>
-      <ButtonNew />
+    <main className={'jg-container'}>
+        <HeroSection />
+        <InfoHomeSection />
     </main>
   )
 }

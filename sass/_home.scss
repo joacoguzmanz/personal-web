@@ -1,0 +1,7 @@
+@use "variables" as vars;
+
+.jg-container {
+    background-color: vars.$jg-dark-grey;
+    color: vars.$jg-white;
+    padding-top: 97px;
+}

@@ -1,0 +1,29 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$jg-space-200;
+
+    &-image {
+        background-color: vars.$jg-grey;
+        min-height: 550px;
+        min-width: 450px;
+        border-radius: vars.$jg-space-100;
+    }
+
+    &-body {
+        text-align: center;
+
+        &-title {
+            margin-bottom: vars.$jg-space-100;
+        }
+
+        &-categories {
+            @include mixs.text-sm-sub;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

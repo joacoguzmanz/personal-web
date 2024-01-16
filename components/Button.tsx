@@ -1,11 +1,15 @@
-import '../sass/_buttons.scss'
+import React from "react";
 
-const ButtonNew = () => {
+interface ButtonProps {
+    text: string
+}
+
+const Button: React.FC<ButtonProps> = ({ text }) => {
     return (
-        <div className='fondo'>
-            Button
+        <div className={'jg-btn-bg'}>
+            {text}
         </div>
     )
 }
 
-export default ButtonNew;
+export default Button;

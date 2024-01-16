@@ -1,6 +1,9 @@
+import React from "react";
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import '../sass/main.scss'
+
+import Navbar from "@/components/Navbar";
 
 const poppins = Poppins({
   weight: ['300', '400', '500'],
@@ -19,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,0 +1,29 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-hero {
+    position: relative;
+    overflow: hidden;
+    @include mixs.desktop {
+        padding: 0 vars.$jg-space-1200;
+        min-height: 680px;
+    }
+
+    &-title {
+        @include mixs.desktop {
+            @include mixs.heading-h1;
+            max-width: 95%;
+            padding-top: 143px;
+        }
+    }
+
+    &-caption {
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+
+        &-text{
+            @include mixs.text-sm;
+        }
+    }
+}

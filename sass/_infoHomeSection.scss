@@ -1,0 +1,46 @@
+@use 'variables' as vars;
+@use "mixins" as mixs;
+
+.jg-info-container {
+    background-color: vars.$jg-extra-light-grey;
+    color: vars.$jg-black;
+    padding: vars.$jg-space-1200 0;
+    margin: 0 20px;
+    border-radius: vars.$jg-border-radius-250;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$jg-space-1600;
+}
+
+.jg-home-projects {
+    margin: 0 auto;
+}
+
+.jg-home-projects-container {
+    display: flex;
+    gap: vars.$jg-space-1000;
+}
+
+.jg-home-projects-title,
+.jg-home-about-title {
+    @include mixs.heading-h2;
+    margin-bottom: vars.$jg-space-600;
+}
+
+.jg-home-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.jg-home-about-title {
+    margin-bottom: vars.$jg-space-300;
+}
+
+.jg-home-about-text {
+    @include mixs.text-lg;
+    max-width: 650px;
+    margin: 0 auto vars.$jg-space-400;
+    text-align: center;
+}

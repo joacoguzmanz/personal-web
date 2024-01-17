@@ -5,11 +5,12 @@
 @use "mixins";
 
 // Components
-@use "navbar";
+@use "header";
 @use "hero";
 @use "infoHomeSection";
 @use "projectCard";
 @use "button";
+@use "hamMenu";
 
 // Sections
 @use "home";

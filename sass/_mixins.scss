@@ -1,8 +1,20 @@
 @use "sass/variables" as vars;
 
 // Responsiveness
+@mixin tablet {
+    @media only screen and (min-width: vars.$jg-breakpoints-md) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media only screen and (min-width: vars.$jg-breakpoints-lg) {
+        @content;
+    }
+}
+
+@mixin desktop-xl {
+    @media only screen and (min-width: vars.$jg-breakpoints-xl) {
         @content;
     }
 }
@@ -57,3 +69,24 @@
     line-height: 1.5;
     color: vars.$jg-grey;
 }
+
+// Containers
+@mixin h-container {
+    margin: 0 24px;
+
+    @include tablet {
+        margin: 0 40px;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+        max-width: 1130px;
+        width: 100%;
+    }
+
+    @include desktop-xl {
+        max-width: 1536px;
+    }
+}
+
+

@@ -1,30 +1,8 @@
 // Breakpoints
-$jg-breakpoints-xs: 0px;
-$jg-breakpoints-sm: 490px;
+$jg-breakpoints-sm: 0px;
 $jg-breakpoints-md: 768px;
-$jg-breakpoints-lg: 1040px;
-$jg-breakpoints-xl: 1440px;
-
-// Breakpoints media queries
-/*$jg-breakpoints-xs-up: (min-width: $jg-breakpoints-xs);
-$jg-breakpoints-xs-down: (max-width: $jg-breakpoints-xs);
-$jg-breakpoints-xs-only: (min-width: $jg-breakpoints-xs) and (max-width: $jg-breakpoints-sm);
-
-$jg-breakpoints-sm-up: (min-width: $jg-breakpoints-sm);
-$jg-breakpoints-sm-down: (max-width: $jg-breakpoints-sm);
-$jg-breakpoints-sm-only: (min-width: $jg-breakpoints-sm) and (max-width: $jg-breakpoints-md);
-
-$jg-breakpoints-md-up: (min-width: $jg-breakpoints-md);
-$jg-breakpoints-md-down: (max-width: $jg-breakpoints-md);
-$jg-breakpoints-md-only: (min-width: $jg-breakpoints-md) and (max-width: $jg-breakpoints-lg);
-
-$jg-breakpoints-lg-up: (min-width: $jg-breakpoints-lg);
-$jg-breakpoints-lg-down: (max-width: $jg-breakpoints-lg);
-$jg-breakpoints-lg-only: (min-width: $jg-breakpoints-lg) and (max-width: $jg-breakpoints-xl);
-
-$jg-breakpoints-xl-up: (min-width: $jg-breakpoints-xl);
-$jg-breakpoints-xl-down: (max-width: $jg-breakpoints-xl);
-$jg-breakpoints-xl-only: (min-width: $jg-breakpoints-xl);*/
+$jg-breakpoints-lg: 1280px;
+$jg-breakpoints-xl: 1920px;
 
 // Fonts
 $jg-font-family-primary: 'Poppins', sans-serif;
@@ -78,3 +56,6 @@ $jg-dark-grey: #2C2D2E;
 $jg-grey: #858E97;
 $jg-light-grey: #C6C5C5;
 $jg-extra-light-grey: #F8F6F5;
+
+// Transitions
+$jg-cubic-out: cubic-bezier(0.16,1,0.3,1);

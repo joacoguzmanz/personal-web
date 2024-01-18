@@ -1,12 +1,24 @@
+'use client'
+
 import Link from "next/link";
 import HamMenu from "@/components/HamMenu";
+import { useContext } from "react";
+import { HamButtonContext, MenuStateContext } from "@/context/menuContext";
 
 const Header = () => {
+    const { setMenuState } = useContext(MenuStateContext);
+    const { setButtonState } = useContext(HamButtonContext);
+
+    const resetMenu = () => {
+        setMenuState('');
+        setButtonState('');
+    }
+
     return (
         <header className='jg-header'>
             <div className="jg-header-container">
                 <div className='jg-header-logo jg-header-logo-start'>
-                    <Link className='jg-header-logo-link' href={'/'}>Joaquin Guzmán</Link>
+                    <Link onClick={resetMenu} className='jg-header-logo-link' href={'/'}>Joaquin Guzmán</Link>
                 </div>
 
                 <nav className='jg-header-nav jg-header-nav-start'>
@@ -23,7 +35,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <HamMenu />
+                <HamMenu/>
             </div>
         </header>
     )

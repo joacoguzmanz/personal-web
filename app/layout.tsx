@@ -5,6 +5,7 @@ import '../sass/main.scss'
 
 import Header from "@/components/Header";
 import MobMenu from "@/components/MobMenu";
+import MenuContext from "@/context/menuContext";
 
 const poppins = Poppins({
   weight: ['300', '400', '500'],
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
-        {children}
-        <MobMenu />
+        <MenuContext>
+          <Header />
+          {children}
+          <MobMenu />
+        </MenuContext>
       </body>
     </html>
   )

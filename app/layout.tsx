@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google'
 import '../sass/main.scss'
 
 import Header from "@/components/Header";
+import MobMenu from "@/components/MobMenu";
 
 const poppins = Poppins({
   weight: ['300', '400', '500'],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Header />
         {children}
+        <MobMenu />
       </body>
     </html>
   )

@@ -10,7 +10,7 @@ const HamMenu = () => {
     }
 
     return (
-        <button className={`jg-menu-button ${menu}`} onClick={openMenu} aria-label={"Open menu"}>
+        <button className={`jg-menu-button ${menu} jg-menu-button-start`} onClick={openMenu} aria-label={"Open menu"}>
             <div className="jg-burger">
                 <div className="jg-burger-stripe -top"></div>
                 <div className="jg-burger-stripe -bottom"></div>

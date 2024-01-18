@@ -12,13 +12,13 @@ const Header = () => {
                 <nav className='jg-header-nav jg-header-nav-start'>
                     <ul className="jg-header-nav-list">
                         <li className="jg-header-nav-list-item">
-                            <Link href={'#'}>About</Link>
+                            <Link href={'/about'}>About</Link>
                         </li>
                         <li className="jg-header-nav-list-item">
-                            <Link href={'#'}>Blog</Link>
+                            <Link href={'/blog'}>Blog</Link>
                         </li>
                         <li className="jg-header-nav-list-item">
-                            <Link href={'#'}>Contact</Link>
+                            <Link href={'/contact'}>Contact</Link>
                         </li>
                     </ul>
                 </nav>

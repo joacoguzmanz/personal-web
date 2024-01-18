@@ -4,10 +4,11 @@
 .jg-hero {
     position: relative;
     overflow: hidden;
+    min-height: 500vh;
     @include mixs.desktop {
         padding: 0 vars.$jg-space-1200;
         //min-height: 680px;
-        min-height: 500vh;
+
     }
 
     &-title {

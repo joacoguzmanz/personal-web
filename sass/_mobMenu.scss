@@ -1,0 +1,40 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-mob-menu {
+  position: fixed;
+  z-index: vars.$jg-z-mob-menu;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: vars.$jg-light-grey;
+  color: vars.$jg-black;
+  clip-path: inset(0 0 0 100%);
+  transition: clip-path .5s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &-active {
+    height: 100%;
+    clip-path: inset(0 0 0 0);
+  }
+
+  &-inner {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &-container {
+    @include mixs.h-container;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

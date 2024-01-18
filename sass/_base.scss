@@ -1,11 +1,11 @@
-@use "variables";
+@use "variables" as vars;
 
 body {
     margin: 0;
     padding: 0;
 
-    font-family: variables.$jg-font-family-primary;
-    font-size: variables.$jg-font-size-body;
+    font-family: vars.$jg-font-family-primary;
+    font-size: vars.$jg-font-size-body;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25,12 +25,12 @@ body {
 
 // Links
 a {
-    // color:$color-link;
+    color: vars.$jg-black;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover, &:focus {
-        // color: $color-link-hover;
+        //color: vars.$jg-primary-blue;
         text-decoration: none;
     }
 }

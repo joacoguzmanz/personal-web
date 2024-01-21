@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: vars.$jg-light-blue;
+  background-color: vars.$jg-white;
   color: vars.$jg-black;
   clip-path: inset(0 0 0 100%);
   transition: clip-path .5s;
@@ -42,9 +42,7 @@
     @include mixs.h-container;
 
     &-title {
-      font-size: vars.$jg-font-size-body;
       color: vars.$jg-grey;
-      font-weight: vars.$jg-font-weight-regular;
     }
   }
 

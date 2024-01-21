@@ -3,15 +3,19 @@
 @use "normalize";
 @use "base";
 @use "mixins";
+@use "typography";
 
 // Components
-@use "header";
-@use "hero";
-@use "infoHomeSection";
-@use "projectCard";
 @use "button";
 @use "hamMenu";
+@use "mobMenu";
 
 // Sections
-@use "home";
-@use "mobMenu";
+@use "section";
+@use "header";
+
+// Pages
+@use "homePage";
+
+
+

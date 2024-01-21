@@ -1,0 +1,157 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+// Headings
+
+.jg-heading-1 {
+    font-size: 40px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.2;
+    letter-spacing: -.05rem;
+
+    @include mixs.tablet {
+        font-size: 50px;
+    }
+
+    @include mixs.desktop {
+        font-size: 72px;
+        line-height: 1.1;
+    }
+}
+
+.jg-heading-2 {
+    font-size: 30px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.2;
+
+    @include mixs.tablet {
+        font-size: 40px;
+    }
+
+    @include mixs.desktop {
+        font-size: 62px;
+    }
+}
+
+.jg-heading-3 {
+    font-size: 20px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.25;
+
+    @include mixs.desktop {
+        font-size: 30px;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 36px;
+    }
+}
+
+.jg-heading-4 {
+    font-size: 22px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.35;
+
+    @include mixs.desktop {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 28px;
+    }
+}
+
+// Text
+
+.jg-text-1 {
+    font-size: 18px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.4;
+
+    @include mixs.tablet {
+        font-size: 20px;
+    }
+
+    @include mixs.desktop {
+        font-size: 28px;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 32px;
+    }
+}
+
+.jg-text-1-medium {
+    font-size: 18px;
+    font-weight: vars.$jg-font-weight-medium;
+    line-height: 1.4;
+
+    @include mixs.tablet {
+        font-size: 20px;
+    }
+
+    @include mixs.desktop {
+        font-size: 28px;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 32px;
+    }
+}
+
+.jg-text-2 {
+    font-size: 16px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.35;
+
+    @include mixs.tablet {
+        line-height: 1.45;
+    }
+
+    @include mixs.desktop {
+        font-size: 22px;
+        line-height: 1.35;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 26px;
+        line-height: 1.45;
+    }
+}
+
+.jg-text-2-medium {
+    font-size: 16px;
+    font-weight: vars.$jg-font-weight-medium;
+    line-height: 1.35;
+
+    @include mixs.tablet {
+        line-height: 1.45;
+    }
+
+    @include mixs.desktop {
+        font-size: 22px;
+        line-height: 1.35;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 26px;
+        line-height: 1.45;
+    }
+}
+
+.jg-text-3 {
+    font-size: 14px;
+    font-weight: vars.$jg-font-weight-regular;
+    line-height: 1.4;
+
+    @include mixs.desktop {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    @include mixs.desktop-xl {
+        font-size: 18px;
+    }
+}
+

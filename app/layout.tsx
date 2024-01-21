@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import '../sass/main.scss'
 
+import LenisScroller from "@/components/LenisScroller";
 import Header from "@/components/Header";
 import MobMenu from "@/components/MobMenu";
 import MenuContext from "@/context/menuContext";
@@ -30,6 +31,8 @@ export default function RootLayout({
           {children}
           <MobMenu />
         </MenuContext>
+
+        <LenisScroller />
       </body>
     </html>
   )

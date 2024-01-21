@@ -1,9 +1,13 @@
 'use client'
 
-import Link from "next/link";
-import HamMenu from "@/components/HamMenu";
-import { useContext } from "react";
-import { HamButtonContext, MenuStateContext } from "@/context/menuContext";
+import Link from 'next/link';
+import HamMenu from '@/components/HamMenu';
+import { useContext, useEffect } from 'react';
+import { HamButtonContext, MenuStateContext } from '@/context/menuContext';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
     const { setMenuState } = useContext(MenuStateContext);
@@ -13,6 +17,22 @@ const Header = () => {
         setMenuState('');
         setButtonState('');
     }
+
+    useEffect(() => {
+        const showAnim = gsap.from('.jg-header', {
+            yPercent: -100,
+            paused: true,
+            duration: 0.2,
+        }).progress(1);
+
+        ScrollTrigger.create({
+            start: "top+=200",
+            end: 99999,
+            onUpdate: (self) => {
+                self.direction === -1 ? showAnim.play() : showAnim.reverse();
+            }
+        });
+    }, []);
 
     return (
         <header className='jg-header'>

@@ -1,0 +1,57 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-home-hero {
+    padding-top: 160px;
+
+    @include mixs.tablet {
+        padding-top: 170px;
+    }
+
+    @include mixs.desktop {
+        padding-top: 260px;
+    }
+
+    @include mixs.desktop-xl {
+        padding-top: 300px;
+    }
+}
+
+.jg-home-projects-about {
+    width: auto;
+    background-color: vars.$jg-light-blue;
+    border-radius: vars.$jg-border-radius-250;
+    margin: 100px 0 0 0;
+    padding: 60px 0 60px;
+
+    @include mixs.tablet {
+        margin: 130px 40px 0;
+    }
+
+    @include mixs.desktop {
+        margin-top: 200px;
+    }
+
+    @include mixs.desktop-xl {
+        margin-top: 130px;
+    }
+}
+
+.jg-home-about {
+    width: 95%;
+    text-align: center;
+
+    @include mixs.tablet {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    @include mixs.desktop {
+        width: 56%;
+    }
+
+    &-title {
+        margin-bottom: 16px;
+    }
+}
+

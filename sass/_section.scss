@@ -1,0 +1,10 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-section {
+    width: 100%;
+}
+
+.jg-container {
+    @include mixs.h-container;
+}

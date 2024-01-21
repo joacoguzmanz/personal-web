@@ -3,27 +3,14 @@
 
 .jg-header {
     position: fixed;
-    z-index: vars.$jg-z-header;
     top: 0;
     left: 0;
     right: 0;
+    background-color: vars.$jg-white;
+    z-index: vars.$jg-z-header;
     transition-property: transform,opacity,background-color;
     transition-duration: .4s;
     transition-timing-function: vars.$jg-cubic-out;
-
-    /*&-black {
-        color: vars.$jg-black;
-    }
-
-    &-white {
-        color: vars.$jg-white;
-    }
-
-    &-hidden {
-        transform: translateY(-20px);
-        opacity: 0;
-        pointer-events: none
-    }*/
 
     &-container {
         display: flex;

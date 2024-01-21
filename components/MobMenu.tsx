@@ -19,7 +19,7 @@ const MobMenu = () => {
             <div className='jg-mob-menu-inner'>
                 <div className='jg-mob-menu-container jg-mob-menu-content'>
                     <div className='jg-mob-menu-body'>
-                        <h3 className='jg-mob-menu-body-title'>Menu</h3>
+                        <h3 className='jg-heading-3 jg-mob-menu-body-title'>Menu</h3>
                         <nav className='jg-mob-menu-body-nav'>
                             <ul className="jg-mob-menu-body-nav-list">
                                 <li className='jg-mob-menu-body-nav-list-item'>
@@ -36,8 +36,8 @@ const MobMenu = () => {
                     </div>
 
                     <div className='jg-mob-menu-footer'>
-                        <h3 className='jg-mob-menu-footer-title'>Let's talk</h3>
-                        <a href={'mailto:#'} className='jg-mob-menu-footer-link'>joaquin@nuitstudio.com</a>
+                        <h3 className='jg-heading-3 jg-mob-menu-footer-title'>Let's talk</h3>
+                        <a href={'mailto:#'} className='jg-text-1'>joaquin@nuitstudio.com</a>
                     </div>
                 </div>
             </div>

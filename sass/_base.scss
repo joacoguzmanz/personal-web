@@ -6,6 +6,7 @@ body {
 
     font-family: vars.$jg-font-family-primary;
     font-size: vars.$jg-font-size-body;
+    color: vars.$jg-black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -55,4 +56,10 @@ ul {
 
 li {
     list-style: none outside none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

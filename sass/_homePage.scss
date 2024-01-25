@@ -22,7 +22,7 @@
     background-color: vars.$jg-light-blue;
     border-radius: vars.$jg-border-radius-250;
     margin: 100px 0 0 0;
-    padding: 60px 0 60px;
+    padding: 40px 0 60px;
 
     @include mixs.tablet {
         margin: 130px 40px 0;
@@ -41,17 +41,27 @@
     width: 95%;
     text-align: center;
 
-    @include mixs.tablet {
+    /*@include mixs.tablet {
         width: 60%;
         margin: 0 auto;
     }
 
     @include mixs.desktop {
         width: 56%;
-    }
+    }*/
 
     &-title {
         margin-bottom: 16px;
     }
 }
 
+.jg-home-blog {
+
+    &-upper {
+        @include mixs.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

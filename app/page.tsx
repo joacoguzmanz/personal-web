@@ -9,7 +9,7 @@ const posts = [
     {title: 'The title for a blog post here', cats: ['Website', 'Design', 'Development', 'Next', 'Sass']}
 ];
 
-const Home = async () => {
+const Home = () => {
   return (
     <main>
         <Section classes={'jg-home-hero'}>

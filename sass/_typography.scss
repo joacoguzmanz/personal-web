@@ -185,3 +185,13 @@
     }
 }
 
+.jg-text-xs {
+    font-size: 12px;
+    font-weight: vars.$jg-font-weight-medium;
+    line-height: 1.4;
+
+    @include mixs.desktop {
+        font-size: 14px;
+    }
+}
+

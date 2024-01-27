@@ -1,5 +1,13 @@
 import Section from "@/components/Section";
 import Link from 'next/link';
+import { gsap } from 'gsap';
+import BlogPost from '@/components/BlogPost';
+
+const posts = [
+    {title: 'How to design a website in Figma', cats: ['Design', 'Website', 'WordPress']},
+    {title: 'Using Next.js to develop a website', cats: ['Branding', 'Typography']},
+    {title: 'The title for a blog post here', cats: ['Website', 'Design', 'Development', 'Next', 'Sass']}
+];
 
 const Home = async () => {
   return (
@@ -10,15 +18,13 @@ const Home = async () => {
             </div>
         </Section>
 
-        <Section classes={'jg-home-projects-about'}>
+        <Section classes={'jg-home-about'}>
             <div className='jg-container'>
-                <div className='jg-home-about'>
-                    <h2 className='jg-heading-2 jg-home-about-title'>About me</h2>
-                    <p className='jg-text-1'>
-                        I'm a website designer and front-end developer from Buenos Aires currently based in Barcelona.
-                        I love to design minimalistic, easy-to-use and SEO friendly websites.
-                    </p>
-                </div>
+                <h2 className='jg-heading-2 jg-home-about-title'>About me</h2>
+                <p className='jg-text-1'>
+                    I'm a website designer and front-end developer from Buenos Aires currently based in Barcelona.
+                    I love to design minimalistic, easy-to-use and SEO friendly websites.
+                </p>
             </div>
         </Section>
 
@@ -26,10 +32,15 @@ const Home = async () => {
             <div className='jg-container'>
                 <div className={'jg-home-blog-upper'}>
                     <h2 className='jg-heading-2'>Some insights</h2>
-                    <Link href={'#'}>Read all</Link>
+                    <Link href={'#'} className='jg-text-3'>Read all</Link>
                 </div>
-                <div className={'jg-home-blog-down'}>
 
+                <div className={'jg-home-blog-down'}>
+                    {posts.map((post, index) => {
+                        return (
+                            <BlogPost categories={post.cats} title={post.title} key={index} />
+                        )
+                    })}
                 </div>
             </div>
         </Section>

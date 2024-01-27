@@ -1,0 +1,45 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-blog-post {
+    &:not(:last-child) {
+        margin-bottom: vars.$jg-space-200;
+    }
+}
+
+.jg-blog-post-inner {
+    background-color: vars.$jg-light-blue;
+    color: vars.$jg-dark-blue;
+    padding: vars.$jg-space-300 vars.$jg-space-200;
+    border-radius: vars.$jg-space-200;
+    // min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mixs.tablet {
+        min-height: vars.$jg-space-400;
+    }
+}
+
+.jg-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: vars.$jg-space-100;
+    list-style: none;
+    margin-top: vars.$jg-space-600;
+}
+
+.jg-blog-post-read {
+    margin: vars.$jg-space-300 0;
+
+    svg {
+        position: relative;
+        display: inline;
+        width: auto;
+        left: 10px;
+        height: 10px;
+        vertical-align: middle;
+    }
+}

@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 
-const BlogPost = () => {
+const BlogPage = () => {
     const pathname = usePathname();
 
     return (
@@ -10,4 +10,4 @@ const BlogPost = () => {
     );
 }
 
-export default BlogPost;
+export default BlogPage;

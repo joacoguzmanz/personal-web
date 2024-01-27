@@ -1,0 +1,13 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-pill {
+    background-color: vars.$jg-extra-light-grey;
+    color: vars.$jg-dark-blue;
+    border-radius: 2rem;
+    padding: 0.275rem 0.55rem;
+
+    @include mixs.tablet {
+        padding: 5px 11px;
+    }
+}

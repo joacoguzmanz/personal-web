@@ -3,13 +3,14 @@ import React from 'react';
 import Pill from '@/components/Pill';
 
 interface BlogPostProps {
-    categories: string[],
-    title?: string
+    categories?: string[],
+    title?: string,
+    slug: string
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ title, categories }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ slug, title, categories }) => {
     return (
-        <Link href={'#'} className='jg-blog-post'>
+        <Link href={slug} className='jg-blog-post'>
             <div className='jg-blog-post-inner'>
                 <div className='jg-blog-post-title'>
                     <h4 className='jg-heading-3'>{title}</h4>
@@ -22,7 +23,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, categories }) => {
                     </p>
                 </div>
                 <ul className="jg-categories">
-                    {categories.map((category, index) => {
+                    {categories?.map((category, index) => {
                         return (
                             <li key={index} className="jg-category"><Pill text={category} /></li>
                         )

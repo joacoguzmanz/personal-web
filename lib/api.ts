@@ -44,14 +44,7 @@ export const getAllPostsForHome = async () => {
             edges {
               node {
                 title
-                excerpt
                 slug
-                date
-                featuredImage {
-                  node {
-                    sourceUrl
-                  }
-                }
                 categories {
                   edges {
                     node {

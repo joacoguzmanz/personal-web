@@ -15,7 +15,10 @@ const fetchAPI = async (query = '', { variables }: Record<string, any> = {}) => 
                 variables,
             }),
             headers,
-        }
+            next: {
+                revalidate: 300
+            }
+        },
     )
 
     return res.json();
@@ -27,7 +30,16 @@ export const getAllPostsWithSlug = async () => {
           posts(first: 50) {
             edges {
               node {
+                title
                 slug
+                categories {
+                  edges {
+                    node {
+                      name
+                      slug
+                    }
+                  }
+                }
               }
             }
           }
@@ -91,7 +103,16 @@ export const getPostAndMorePosts = async (slug: string, idType: string) => {
           posts {
             edges {
               node {
-                ...PostFields
+                title
+                slug
+                categories {
+                  edges {
+                    node {
+                      name
+                      slug
+                    }
+                  }
+                }
               }
             }
           }

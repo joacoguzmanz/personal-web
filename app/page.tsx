@@ -1,19 +1,10 @@
 import Section from "@/components/Section";
 import Link from 'next/link';
-import { gsap } from 'gsap';
 import BlogPost from '@/components/BlogPost';
 import { getAllPostsForHome } from '@/lib/api';
 
-const posts = [
-    {title: 'How to design a website in Figma', cats: ['Design', 'Website', 'WordPress']},
-    {title: 'Using Next.js to develop a website', cats: ['Branding', 'Typography']},
-    {title: 'The title for a blog post here', cats: ['Website', 'Design', 'Development', 'Next', 'Sass']}
-];
-
 const Home = async () => {
     const posts = await getAllPostsForHome();
-
-    console.log(posts[0].node.categories.edges);
 
   return (
     <main>
@@ -37,7 +28,7 @@ const Home = async () => {
             <div className='jg-container'>
                 <div className={'jg-home-blog-upper'}>
                     <h2 className='jg-heading-2'>Some insights</h2>
-                    <Link href={`/blog}`} className='jg-text-3'>Read all</Link>
+                    <Link href={'/blog'} className='jg-text-3'>Read all</Link>
                 </div>
 
                 <div className={'jg-home-blog-down'}>

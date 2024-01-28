@@ -16,7 +16,7 @@ const fetchAPI = async (query = '', { variables }: Record<string, any> = {}) => 
             }),
             headers,
             next: {
-                revalidate: 300
+                revalidate: 3600
             }
         },
     )
@@ -125,4 +125,32 @@ export const getPostAndMorePosts = async (slug: string, idType: string) => {
     });
 
     return data.data;
+}
+
+export const getAllPostWithCategory = async (category: string) => {
+    const data = await fetchAPI(`
+        query getAllPostsWithCategory($categoryName: String) {
+          posts(where: {categoryName: $categoryName}) {
+            edges {
+              node {
+                title
+                slug
+                categories {
+                  edges {
+                    node {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    `, {
+        variables: {
+            categoryName: category,
+        }
+    });
+
+    return data?.data.posts.edges;
 }

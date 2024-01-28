@@ -33,7 +33,6 @@ const Home = async () => {
 
                 <div className={'jg-home-blog-down'}>
                     {posts.map((post: any, index: any) => {
-                        console.log(post.node.categories.edges);
                         return (
                             <BlogPost slug={`/blog/${post.node.slug}`} title={post.node.title} key={index} />
                         )

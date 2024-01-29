@@ -1,0 +1,14 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-category {
+    padding-top: 160px;
+
+    @include mixs.tablet {
+        padding-top: 200px;
+    }
+
+    @include mixs.desktop-xl {
+        padding-top: 300px;
+    }
+}

@@ -1,0 +1,34 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-blog-tile {
+    display: block;
+    margin-bottom: 60px;
+
+    &:first-of-type {
+        margin-top: 60px;
+    }
+}
+
+.jg-blog-tile-title {
+    font-weight: vars.$jg-font-weight-regular;
+    font-size: vars.$jg-heading-3;
+    line-height: vars.$jg-font-line-height-130;
+    margin-bottom: 20px;
+
+    @include mixs.tablet {
+        font-size: vars.$jg-heading-2;
+        max-width: 650px;
+    }
+
+    @include mixs.desktop {
+        font-size: vars.$jg-heading-1;
+        max-width: 900px;
+        margin-bottom: 10px;
+    }
+}
+
+.jg-blog-tile-categories {
+    display: flex;
+    gap: 10px;
+}

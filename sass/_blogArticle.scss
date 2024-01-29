@@ -2,7 +2,7 @@
 @use "mixins" as mixs;
 
 .jg-blog-article {
-    margin-top: 150px;
+    margin: 150px auto 0;
 }
 
 .jg-blog-article-header {
@@ -24,11 +24,18 @@
 }
 
 .jg-blog-article-content {
+    @include mixs.tablet {
+        max-width: 638px;
+        margin: 0 auto;
+    }
+
     h2 {
         font-size: vars.$jg-heading-2;
-        font-weight: vars.$jg-font-weight-regular;
+        font-weight: vars.$jg-font-weight-medium;
         line-height: vars.$jg-font-line-height-130;
         letter-spacing: -.05rem;
+        margin-bottom: 36px;
+        margin-top: 40px;
     }
 
     h3 {
@@ -36,12 +43,16 @@
         font-weight: vars.$jg-font-weight-regular;
         line-height: vars.$jg-font-line-height-130;
         letter-spacing: -.05rem;
+        margin-bottom: 28px;
+        margin-top: 40px;
     }
 
     h4 {
         font-size: vars.$jg-heading-4;
         font-weight: vars.$jg-font-weight-regular;
         line-height: vars.$jg-font-line-height-130;
+        margin-bottom: 20px;
+        margin-top: 30px;
     }
 
     p {
@@ -49,5 +60,10 @@
         font-weight: vars.$jg-font-weight-regular;
         line-height: vars.$jg-font-line-height-150;
         max-width: 638px;
+        margin-bottom: 12px;
+
+        @include mixs.tablet {
+            margin-bottom: 20px;
+        }
     }
 }

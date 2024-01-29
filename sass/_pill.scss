@@ -6,8 +6,17 @@
     color: vars.$jg-dark-blue;
     border-radius: 2rem;
     padding: 0.275rem 0.55rem;
+    transition: 0.8s;
+    transition-timing-function: vars.$jg-cubic-out;
 
     @include mixs.tablet {
         padding: 5px 11px;
+    }
+
+    @include mixs.desktop {
+        &:hover {
+            background-color: vars.$jg-dark-blue;
+            color: vars.$jg-white;
+        }
     }
 }

@@ -16,7 +16,7 @@ const fetchAPI = async (query = '', { variables }: Record<string, any> = {}) => 
             }),
             headers,
             next: {
-                revalidate: 360
+                revalidate: 5
             }
         },
     )
@@ -156,4 +156,21 @@ export const getAllPostWithCategory = async (category: string) => {
     });
 
     return data?.data.posts.edges;
+}
+
+export const getAllCategories = async () => {
+    const data = await fetchAPI(`
+        query getAllCategories {
+          categories {
+            edges {
+              node {
+                name
+                slug
+              }
+            }
+          }
+        }
+    `);
+
+    return data?.data.categories.edges;
 }

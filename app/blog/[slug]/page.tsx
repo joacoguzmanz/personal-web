@@ -4,6 +4,7 @@ import Pill from '@/components/Pill';
 
 const BlogPage = async ({ params }: any) => {
     const testing = await getPostAndMorePosts(params.slug, 'SLUG');
+    const fetchedPost = testing.post;
     const fetchedCategories = testing.post.categories.edges;
 
     const formattedDate: string = new Date(testing.post.date).toLocaleDateString('en-GB', {
@@ -31,6 +32,7 @@ const BlogPage = async ({ params }: any) => {
 
 
                 <div className='jg-blog-article-content' dangerouslySetInnerHTML={{ __html: testing.post.content }} />
+
             </div>
         </div>
     );

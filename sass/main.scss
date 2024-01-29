@@ -15,9 +15,13 @@
 // Sections
 @use "section";
 @use "header";
+@use "footer";
 
 // Pages
 @use "homePage";
+@use "contactPage";
+@use "blogPage";
+@use "blogArticle";
 
 
 

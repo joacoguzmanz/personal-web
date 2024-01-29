@@ -6,7 +6,7 @@ const Blog = async () => {
     const posts = await getAllPostsWithSlug();
 
     return (
-        <div style={{margin: '200px 0 0 0'}}>
+        <main className='jg-blog' style={{margin: '200px 0 0 0'}}>
             <h1>Blog Page</h1>
             <div>Categories</div>
             {posts.map((post: any, index: any) => {
@@ -21,7 +21,7 @@ const Blog = async () => {
                     </Link>
                 )
             })}
-        </div>
+        </main>
     )
 }
 

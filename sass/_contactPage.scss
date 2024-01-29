@@ -1,0 +1,92 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-contact {
+    padding-top: vars.$jg-space-1000;
+    padding-bottom: vars.$jg-space-600;
+
+    @include mixs.tablet {
+        padding-top: 170px;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: vars.$jg-space-300;
+
+        @include mixs.tablet {
+            flex-direction: row;
+            gap: vars.$jg-space-600;
+        }
+    }
+
+    &-left {
+        @include mixs.tablet {
+            width: 50%;
+        }
+    }
+
+    &-right {
+
+        @include mixs.tablet {
+            width: 50%;
+        }
+
+        &-image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border-radius: vars.$jg-space-100;
+
+            @include mixs.tablet {
+                height: 400px;
+            }
+
+            @include mixs.desktop {
+                height: 600px;
+            }
+
+            img {
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+    }
+
+    &-title {
+        margin-bottom: 10px;
+
+        @include mixs.tablet {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-mail {
+        display: inline-block;
+        margin: 60px 0;
+    }
+}
+
+.jg-socials {
+    display: flex;
+    gap: vars.$jg-space-300;
+
+    @include mixs.tablet {
+        gap: vars.$jg-space-600;
+    }
+
+    &-icon {
+        width: 20px;
+        height: 20px;
+
+        @include mixs.tablet {
+            width: 24px;
+            height: 24px;
+        }
+
+        @include mixs.desktop {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

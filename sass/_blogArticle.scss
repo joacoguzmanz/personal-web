@@ -1,0 +1,53 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.jg-blog-article {
+    margin-top: 150px;
+}
+
+.jg-blog-article-header {
+    margin-bottom: 60px;
+
+    @include mixs.desktop {
+        margin-bottom: 90px;
+    }
+}
+
+.jg-blog-article-categories {
+    display: flex;
+    gap: 10px;
+}
+
+.jg-blog-article-title {
+    font-weight: vars.$jg-font-weight-medium;
+    margin: 20px 0;
+}
+
+.jg-blog-article-content {
+    h2 {
+        font-size: vars.$jg-heading-2;
+        font-weight: vars.$jg-font-weight-regular;
+        line-height: vars.$jg-font-line-height-130;
+        letter-spacing: -.05rem;
+    }
+
+    h3 {
+        font-size: vars.$jg-heading-3;
+        font-weight: vars.$jg-font-weight-regular;
+        line-height: vars.$jg-font-line-height-130;
+        letter-spacing: -.05rem;
+    }
+
+    h4 {
+        font-size: vars.$jg-heading-4;
+        font-weight: vars.$jg-font-weight-regular;
+        line-height: vars.$jg-font-line-height-130;
+    }
+
+    p {
+        font-size: vars.$jg-body;
+        font-weight: vars.$jg-font-weight-regular;
+        line-height: vars.$jg-font-line-height-150;
+        max-width: 638px;
+    }
+}

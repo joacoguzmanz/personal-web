@@ -7,7 +7,7 @@ const Home = async () => {
     const posts = await getAllPostsForHome();
 
   return (
-    <main>
+    <main style={{backgroundColor: 'white'}}>
         <Section classes={'jg-home-hero'}>
             <div className="jg-container">
                 <h1 className="jg-heading-extra">I’m Joaquin! Frontend developer and Web Designer based in Barcelona.</h1>

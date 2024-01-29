@@ -5,6 +5,7 @@ import '../sass/main.scss'
 
 import LenisScroller from "@/components/LenisScroller";
 import Header from "@/components/Header";
+import Footer from '@/components/Footer';
 import MobMenu from "@/components/MobMenu";
 import MenuContext from "@/context/menuContext";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <MenuContext>
           <Header />
           {children}
+          <Footer />
           <MobMenu />
         </MenuContext>
 

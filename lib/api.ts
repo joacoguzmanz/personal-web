@@ -16,7 +16,7 @@ const fetchAPI = async (query = '', { variables }: Record<string, any> = {}) => 
             }),
             headers,
             next: {
-                revalidate: 3600
+                revalidate: 360
             }
         },
     )
@@ -32,6 +32,7 @@ export const getAllPostsWithSlug = async () => {
               node {
                 title
                 slug
+                date
                 categories {
                   edges {
                     node {
@@ -57,6 +58,7 @@ export const getAllPostsForHome = async () => {
               node {
                 title
                 slug
+                date
                 categories {
                   edges {
                     node {
@@ -129,12 +131,13 @@ export const getPostAndMorePosts = async (slug: string, idType: string) => {
 
 export const getAllPostWithCategory = async (category: string) => {
     const data = await fetchAPI(`
-        query getAllPostsWithCategory($categoryName: String) {
+        query ($categoryName: String) {
           posts(where: {categoryName: $categoryName}) {
             edges {
               node {
                 title
                 slug
+                date
                 categories {
                   edges {
                     node {

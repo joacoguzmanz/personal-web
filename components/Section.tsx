@@ -10,9 +10,7 @@ const Section: React.FC<SectionProps> = ({ classes, children}) => {
 
     return (
         <section className={`jg-section ${classNames ? classNames : ''}`}>
-            {/*<div className='jg-container'>*/}
-                { children }
-            {/*</div>*/}
+            { children }
         </section>
     )
 }

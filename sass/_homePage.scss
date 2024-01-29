@@ -40,9 +40,9 @@
 }
 
 .jg-home-blog {
-    margin: vars.$jg-space-800 auto;
+    margin: vars.$jg-space-800 0;
 
-    @include mixs.desktop {
+    @include mixs.tablet {
         margin: vars.$jg-space-1200 0;
     }
 
